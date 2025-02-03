@@ -1,0 +1,14 @@
+{
+  "name": "Mechri Engineering Solutions",
+  "description": "",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
