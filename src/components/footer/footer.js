@@ -4,11 +4,6 @@ import Link from 'next/link'; // to navigate to other pages
 import data from './footer.data';
 import { FaChevronRight } from 'react-icons/fa';
 
-import KMRClogo from 'assets/Kmrclogo.png';
-import Bbslogo from 'assets/Benchmarklogo.png';
-import Atlogo from 'assets/alphalogo.png';
-import Cmaxlogo from 'assets/cmaxlogo.png';
-import Stanbiclogo from 'assets/stanbiclogo.png';
 import Kpra from 'assets/kpra.png';
 import Nca from 'assets/NCA.png';
 import Footerbg from 'assets/footerbg1.jpg';
@@ -16,26 +11,6 @@ import Footerbg from 'assets/footerbg1.jpg';
 export default function Footer() {
   return (
     <footer sx={styles.footer}>
-      {/* Partners Section */}
-      <Box sx={styles.footer.partners}>
-        <Grid sx={styles.footer.logos}>
-          <Link href="https://bbsltd.co.ke/">
-            <Image src={Bbslogo} style={{ width: '100px', height: 'auto' }} alt="Logo" />
-          </Link>
-          <Link href="https://www.kmrc.co.ke/">
-            <Image src={KMRClogo} style={{ width: '100px', height: 'auto' }} alt="Logo" />
-          </Link>
-          <Link href="https://www.cmax.co.ke/cmax-technology/">
-            <Image src={Cmaxlogo} style={{ width: '100px', height: 'auto' }} alt="Logo" />
-          </Link>
-          <Link href="https://www.stanbicbank.co.ke/kenya/personal/products-and-services/borrow-for-your-needs/see-all-home-loans/affordable-housing">
-            <Image src={Stanbiclogo} style={{ width: '100px', height: 'auto' }} alt="Logo" />
-          </Link>
-          <Link href="https://alphainsights.co.ke/">
-            <Image src={Atlogo} style={{ width: '100px', height: 'auto' }} alt="Logo" />
-          </Link>
-        </Grid>
-      </Box>
 
       {/* Site Map and Social Media Section */}
       <Box sx={styles.footer.siteMapBg}>
@@ -122,7 +97,7 @@ export default function Footer() {
       <Box sx={styles.footer.copywriter}>
         <Grid sx={styles.footer.copywriterGrid}>
           <Text sx={styles.footer.copyright}>
-            ©️ {new Date().getFullYear()} Benchmark Building Solutions Ltd
+            ©️ {new Date().getFullYear()} Mechri Engineering Solutions Ltd
           </Text>
           <Text>Powered by
             <a
@@ -140,24 +115,7 @@ export default function Footer() {
 
 const styles = {
   footer: {
-    partners: {
-      mt: '100px',
-      mb: '100px',
-    },
-    logos: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '30px',
-      mb: '20px',
-      cursor: 'pointer',
-      ':last-child': {
-        mb: '0',
-      },
-      '&:hover': {
-        color: 'primary',
-      },
-    },
+
     siteMapBg: {
       pt: '50px',
       pb: '50px',
@@ -172,7 +130,7 @@ const styles = {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(20, 48, 86, .96)',
+        backgroundColor: 'rgba(121, 215, 255, .5)',
         zIndex: 1,
       },
     },
@@ -260,7 +218,7 @@ const styles = {
     },
     heading: {
       fontSize: 3,
-      color: 'muted',
+      color: 'primary',
       lineHeight: 1.4,
       fontWeight: 700,
       mb: [2, null, 3, 2, 3],

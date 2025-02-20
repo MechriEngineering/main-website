@@ -5,26 +5,16 @@ import Carousel from 'react-multi-carousel';
 import SectionHeader from 'components/section-header';
 
 // Import Images
-import A from 'assets/Kagaa project media/1.jpg';
+import A from 'assets/Kagaa project media/1.webp';
 import B from 'assets/Kagaa project media/2.jpg';
-import C from 'assets/Kagaa project media/3.jpg';
-import D from 'assets/Kagaa project media/4.jpg';
-import E from 'assets/Kagaa project media/5.jpg';
-import F from 'assets/Kagaa project media/6.jpg';
+import C from 'assets/Kagaa project media/3.webp';
+import D from 'assets/Kagaa project media/4.webp';
+import E from 'assets/Kagaa project media/5.webp';
+import F from 'assets/Kagaa project media/6.webp';
 import G from 'assets/Kagaa project media/7.jpg';
-import H from 'assets/Kagaa project media/8.jpg';
-import J from 'assets/Kagaa project media/10.jpg';
-import K from 'assets/Kagaa project media/11.jpg';
-import L from 'assets/Kagaa project media/12.jpg';
-import M from 'assets/Kagaa project media/13.jpg';
-import N from 'assets/Kagaa project media/14.jpg';
-import O from 'assets/Kagaa project media/15.jpg';
-import P from 'assets/Kagaa project media/16.jpg';
-import Q from 'assets/Kagaa project media/17.jpg';
-import R from 'assets/Kagaa project media/18.jpg';
 
 // Array of images
-const images = [A, B, C, D, E, F, G, H, J, K, L, M, N, O, P, Q, R];
+const images = [A, B, C, D, E, F, G];
 
 const responsive = {
     desktop: {
@@ -71,7 +61,7 @@ const Gallery = () => {
 
     return (
         <section sx={styles.main}>
-            <SectionHeader slogan="Featured 'Jenga Kwako na CMAX'  project" title="Gallery" />
+            <SectionHeader slogan="Check out some of our projects" title="Gallery" />
             <Box sx={styles.gallery}>
                 {typeof window !== 'undefined' && window.innerWidth > 639 && (
                     <Box sx={styles.mainImageContainer}>

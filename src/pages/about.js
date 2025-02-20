@@ -5,12 +5,9 @@ import { StickyProvider } from '../contexts/app/app.provider';
 import theme from '../theme';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Gachinga from 'assets/gachingabanner.png';
-//import ShapeRight from 'assets/aboutbanner2.png;'
+import Aboutbg from 'assets/about-banner.png';
 import FeaturedProject from '../sections/featured-project';
 import TeamSection from '../sections/team-section';
-import Otherproducts from '../sections/other-products';
-import Highlights from '../sections/highlights';
 
 export default function AboutPage() {
     return (
@@ -36,8 +33,6 @@ export default function AboutPage() {
 
                     <FeaturedProject />
                     <TeamSection />
-                    <Highlights />
-                    <Otherproducts />
                 </Layout>
             </StickyProvider>
         </ThemeProvider>
@@ -75,17 +70,17 @@ const styles = {
         '&::after': {
             position: 'absolute',
             content: '""',
-            top: 10,
-            bottom: 10,
+            top: '0%',
+            //bottom: 10,
             left: 0,
             right: 0,
             height: '100%',
             width: '100%',
             zIndex: -1,
-            backgroundImage: `url(${Gachinga})`,
+            backgroundImage: `url(${Aboutbg})`,
             backgroundRepeat: `no-repeat`,
             backgroundPosition: 'bottom left',
-            backgroundSize: '36%',
+            backgroundSize: '50%',
             '@media screen and (max-width: 768px)': {
                 display: 'none',  // Hide the image on mobile devices
             },

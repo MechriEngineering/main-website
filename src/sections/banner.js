@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
-import BannerImg from 'assets/banner-letter.png';
 import ShapeLeft from 'assets/shape-left1.png';
 import BannerBg from 'assets/bannerbg-parallax1.jpg';
 import Homebanner from 'assets/homebanner.png';
+import herobg from 'assets/solar installation.webp'
 
 export default function Banner() {
   return (
@@ -12,13 +12,15 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary" sx={styles.titleHeading}>
-            IT'S NOT BUSINESS,
-            <Text sx={styles.redText}>IT'S PERSONAL</Text>
+            YOUR PARTNER,
+            <Text sx={styles.orangeText}>IN PROGRESS</Text>
           </Heading>
+
+          <Text as="p" variant="heroSecondary" sx={styles.titleContent}>
+            From Ground to Greatness: Unlocking Reliable Water for Every Home.
+          </Text>
         </Box>
-        <Box sx={styles.banner.imageBox}>
-          <Image src={BannerImg} alt="banner" />
-        </Box>
+
       </Container>
     </section>
   );
@@ -27,7 +29,7 @@ export default function Banner() {
 
 const styles = {
   banner: {
-    //height: '100vh',
+    height: '70vh',
     pt: ['140px', '145px', '155px', '170px', null, null, '180px', '215px'],
     pb: [2, null, 0, null, 2, 0, null, 5],
     position: 'relative',
@@ -40,36 +42,19 @@ const styles = {
     '&::before': {
       position: 'absolute',
       content: '""',
-      top: '-35%',
-      left: '55%',
+      top: '10%',
+      //left: '55%',
       height: '100%',
       width: '100%',
       zIndex: -1,
       backgroundImage: `url(${Homebanner})`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: 'bottom right',
-      backgroundSize: '45%',
-      transform: 'scaleX(-1)',
+      backgroundSize: '25%',
+      //transform: 'scaleX(-1)',
       /* '@media screen and (max-width: 768px)': {
          display: 'none',  // Hide the image on mobile devices
        },*/
-    },
-    '&::after': {
-      position: 'absolute',
-      content: '""',
-      top: 10,
-      bottom: 0,
-      paddingBottom: '50%',
-      left: 0,
-      right: 0,
-      height: '100%',
-      width: '100%',
-      zIndex: -1,
-      //backgroundImage: `url(${Homebanner})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundPosition: 'top right',
-      backgroundSize: '40%',
-      transform: 'scaleX(-1)', // Invert the image horizontally
     },
     container: {
       minHeight: 'inherit',
@@ -85,27 +70,18 @@ const styles = {
       textAlign: 'center',
       mb: ['40px', null, null, null, null, 7],
     },
-    imageBox: {
-      justifyContent: 'center',
-      textAlign: 'center',
-      display: 'inline-flex',
-      mb: [0, null, -6, null, null, '-40px', null, -3],
-      img: {
-        position: 'relative',
-        height: [245, 'auto'],
-      },
-    },
+
   },
-  redText: {
-    color: 'red',
+  orangeText: {
+    color: '#eebf21',
   },
   titleHeading: {
-    left: '10%',
+    //left: '10%',
     textAlign: 'left',
-    top: '20px',
+    // top: '20px',
   },
   titleContent: {
     mt: 13,
-    textAlign: 'right'
+    textAlign: 'left'
   }
 };

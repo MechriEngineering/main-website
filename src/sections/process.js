@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Grid, Box, Heading, Text } from 'theme-ui';
 import SectionHeader from 'components/section-header';
-import RegisterButton from 'components/signupform/RegisterButton';
 import PatternBG from 'assets/patternBG.png';
 import ArrowOdd from 'assets/arrowOdd.svg';
 import ArrowEven from 'assets/arrowEven.svg';
@@ -54,12 +53,6 @@ export default function Process() {
             </Box>
           ))}
         </Grid>
-
-        <Box sx={styles.buttonWrapper}>
-          <Box sx={styles.buttonContainer}>
-            <RegisterButton />
-          </Box>
-        </Box>
       </Container>
     </section>
   );

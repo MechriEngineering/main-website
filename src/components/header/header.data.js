@@ -1,24 +1,25 @@
 export default [
-  /*{
-    path: 'home',
+  {
+    path: '/',
     label: 'Home',
-  },**/
+  },
   {
     path: '/about',
     label: 'About Us',
   },
-  {
-    path: '/clientarea',
-    label: 'Client Area',
-  },
+  /* {
+     path: '/clientarea',
+     label: 'Client Area',
+   }, 
+   {
+     path: '/sampleplans',
+     label: 'Sample Plans',
+   },**/
   {
     path: '/epstechnology',
-    label: 'EPS Technology',
+    label: 'Our services',
   },
-  {
-    path: '/sampleplans',
-    label: 'Sample Plans',
-  },
+
   {
     path: '/contact',
     label: 'Contact Us',

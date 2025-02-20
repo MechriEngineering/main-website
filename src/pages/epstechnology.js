@@ -41,24 +41,8 @@ export default function EpsTechnologyPage() {
         <ThemeProvider theme={theme}>
             <StickyProvider>
                 <Layout>
-                    <SEO title="EPS technology | Jenga Kwako" />
+                    <SEO title="Our services" />
 
-                    <section sx={styles.banner} id="home">
-                        <Container sx={styles.banner.container}>
-                            <Box sx={styles.banner.contentBox}>
-                                <Heading as="h1" variant="heroPrimary" sx={styles.titleHeading}>
-                                    THE FUTURE OF CONSTRUCTION
-
-                                </Heading>
-                                <Text sx={styles.redText}>
-                                    <SliderEffect />
-                                </Text>
-                                <Text as="p" variant="heroSecondary" sx={styles.titleContent}>
-                                    The C-MAX® advanced building system is an innovative construction system with a history of over 40 years of remarkable success worldwide.
-                                </Text>
-                            </Box>
-                        </Container>
-                    </section>
 
                     <Epspanel />
                     <Gallery />

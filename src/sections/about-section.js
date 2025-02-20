@@ -15,32 +15,25 @@ import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
 import { IoIosPlay } from 'react-icons/io';
 
-import DescriptionThumb from 'assets/Alice KMRC.png';
-import shapePattern from 'assets/shape-pattern1.png';
+import DescriptionThumb from 'assets/solar installation.webp';
+import shapePattern from 'assets/shape-pattern3.png';
 
 import Quality from 'assets/services/smart.svg';
 import Affordable from 'assets/services/secure.svg';
 
 const data = {
-  subTitle: 'How does it work ?',
-  title: 'Jenga Kwako, Road to Home-Ownership',
+  subTitle: 'Dig Deeper, Rise Higher',
+  title: 'Innovative drilling for a brighter tomorrow',
   features: [
     {
       id: 1,
       imgSrc: Quality,
-      altText: 'Quality Construction',
-      title: 'Quality Construction Services',
+      altText: 'Quality Drilling',
+      title: 'Quality Borehole Drilling Services',
       text:
-        'We have created your one-stop shop for all construction needs: architectural services, QS services, and full construction from foundation to finishing! We also help you get the necessary government approvals & permits for construction',
+        'In an industry where delays and inconsistent standards often hold back progress, we tackle every challenge head-on—combining integrity, strict compliance, on-time delivery, expert insights, and an efficient process to address your water needs.',
     },
-    {
-      id: 2,
-      imgSrc: Affordable,
-      altText: 'Affordable Home Loans',
-      title: 'Affordable Home Loans',
-      text:
-        'The KMRC-backed mortgage offers the most affordable home loans at a fixed interest rate of 9.5% p.a on a reducing balance, with repayment period of up to 25 years. You can get upto 10.5 million to build your own home',
-    },
+
   ],
 };
 

@@ -3,15 +3,15 @@ import { jsx, Container, Box, Button } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 import Image from 'components/image';
 
-import FeatureThumb from 'assets/core-feature.jpg';
+import FeatureThumb from 'assets/pump installation.webp';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
-  subTitle: 'Lead Contractor | Technical Director',
-  title: 'Joseph Gachinga',
+  subTitle: 'Lead Contractor | CEO',
+  title: 'Sharlyn ',
   description:
-    'My gratification as a construction professional of more than 30 years is the joy my clients experience when I hand over the project. We are dedicated to providing services that are nothing short of excellent',
-  btnName: 'Featured Projects',
+    'My gratification as a borehole drilling professional of more than 30 years is the joy my clients experience when I hand over the project. We are dedicated to providing services that are nothing short of excellent',
+  btnName: 'Our Services',
   btnURL: 'https://bbsltd.co.ke/gallery/',
 };
 
