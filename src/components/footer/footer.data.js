@@ -15,48 +15,33 @@ export default {
     quickLinks: [
       {
         path: '/sampleplans',
-        label: 'Sample plans'
+        label: 'About Us'
       },
       {
         path: 'https://bbsltd.co.ke/kagaa-project/',
-        label: 'Ongoing Projects'
+        label: 'Our Services'
       },
       {
         path: 'https://bbsltd.co.ke/gallery/',
-        label: 'Featured Projects'
+        label: 'Frequently Asked Questions'
       },
       {
         path: 'https://bbsltd.co.ke/diaspora-building-solutions/',
-        label: 'Diaspora Building Solutions'
+        label: 'Contact Us'
       },
-      {
-        path: 'https://bbsltd.co.ke/building-consultancy/',
-        label: 'Construction Consultancy Services'
-      },
+
     ],
   },
   resources: {
     heading: 'Resources',
     items: [
       {
-        path: '/downloadables/JK-ammortization-table.pdf',
-        label: 'Ammortization Table'
+        path: '#',
+        label: 'Company profile'
       },
       {
         path: '/downloadables/JK-Requirements-Checklist.pdf',
         label: 'Requirements checklist'
-      },
-      /* {
-       path: '/downloadables/KMRC-Annual-Report-2023.pdf',
-       label: 'KMRC Annual Reports'
-     },
-     {
-       path: '/downloadables/JK-terms.pdf',
-       label: 'Jenga Kwako T&C\'s '
-     },*/
-      {
-        path: '/',
-        label: 'Construction GPT (beta) '
       },
 
     ],
@@ -66,15 +51,15 @@ export default {
     details: [
       {
         icon: FaEnvelope,
-        info: 'info@bbsltd.co.ke'
+        info: 'info@mechriengineering.co.ke'
       },
       {
         icon: FaPhone,
-        info: '+254 722 333 324'
+        info: '+254 746 300331'
       },
       {
         icon: FaMapMarkerAlt,
-        info: 'Mapa House, Basement, Biashara street, Kiambu Town'
+        info: 'Limuru road, Nairobi, Kenya'
       },
     ],
   },
@@ -82,23 +67,23 @@ export default {
     heading: 'Social Media',
     links: [
       {
-        path: 'https://www.instagram.com/jengakwako_ke/',
+        path: '#',
         icon: FaInstagram
       },
       {
-        path: 'https://www.facebook.com/bbsltdke/',
+        path: 'https://www.facebook.com/profile.php?id=100048407985687',
         icon: FaFacebookF
       },
       {
-        path: 'https://x.com/BenchmarkBuild4',
+        path: '#',
         icon: FaTwitter
       },
       {
-        path: 'https://www.youtube.com/@bbsltd_ke',
+        path: '#',
         icon: FaYoutube
       },
       {
-        path: 'https://www.linkedin.com/company/benchmark-building-solutions-ltd/',
+        path: '#',
         icon: FaLinkedinIn
       },
     ],

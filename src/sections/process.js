@@ -8,27 +8,27 @@ import ArrowEven from 'assets/arrowEven.svg';
 const data = [
   {
     id: 1,
-    title: 'Application & Appraisal',
+    title: 'Application & Site Survey',
     text:
-      'Register for the product by pressing the red register button below 👇, and we\'ll gather details to assess how much you qualify for. A bank representative will contact you to request necessary documents.',
+      'Begin by submitting your borehole drilling request. Our team will conduct a preliminary site survey to assess feasibility, location suitability, and water availability.',
   },
   {
     id: 2,
-    title: 'Drawings, BQ, Approvals & Permits',
+    title: 'Hydrogeological Survey & Permits',
     text:
-      'Once the bank determines your eligibility, share your budget with us. We\'ll create architectural and structural drawings, then estimate the construction costs. We\’ll also handle the required government approvals and permits.',
+      'A detailed hydrogeological survey is conducted to determine the water table depth and expected yield. We also handle the necessary government permits and approvals for borehole drilling.',
   },
   {
     id: 3,
-    title: 'Bank Disburses the Funds ',
+    title: 'Drilling & Casing Installation',
     text:
-      'After meeting the bank\'s requirements, the funds will be released to your account for construction purposes. The bank will disburse the money in tranches, monitoring the progress and quality of the construction.',
+      'Once approvals are secured, we proceed with drilling to the required depth. High-quality casing and gravel pack are installed to ensure borehole stability and prevent contamination.',
   },
   {
     id: 4,
-    title: 'Complete Construction: Foundation to Finishing',
+    title: 'Pumping Test, Equipping & Handover',
     text:
-      'Benchmark Building Solutions will handle the entire construction process from foundation to finishing, following the agreed-upon drawings, BQ, and terms and conditions, all under bank supervision.',
+      'A pumping test is carried out to determine the borehole’s yield. We then install the necessary pumping system, conduct final quality checks, and hand over a fully operational borehole.',
   },
 ];
 

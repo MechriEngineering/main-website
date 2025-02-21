@@ -49,7 +49,7 @@ export default function aboutSection() {
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={DescriptionThumb} alt="Thumbnail" />
-          <Button
+          {/** <Button
             sx={styles.videoBtn}
             onClick={handleClick}
             aria-label="Play Button"
@@ -57,7 +57,7 @@ export default function aboutSection() {
             <span>
               <IoIosPlay />
             </span>
-          </Button>
+          </Button> */}
 
           <Box sx={styles.shapeBox}>
             <Image src={shapePattern} alt="Shape" />

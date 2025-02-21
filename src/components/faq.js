@@ -7,45 +7,51 @@ const faqData = {
     content: [
         {
             id: 1,
-            question: 'What is Jenga Kwako?',
+            question: 'What is borehole drilling and how does it work?',
             answer:
-                'Jenga Kwako is a comprehensive solution for home ownership, offering services ranging from architectural design to construction and affordable home loans.',
+                'Borehole drilling is the process of creating a deep, narrow well to access groundwater. Our expert team uses advanced equipment to extract water efficiently and sustainably.',
         },
         {
             id: 2,
-            question: 'How do I apply for a home loan?',
+            question: 'How long does a typical borehole drilling project take?',
             answer:
-                'You can apply for a home loan by contacting us directly through our website or visiting our offices. We offer KMRC-backed mortgages with affordable interest rates.',
+                'Timelines vary based on site conditions and project depth, but most projects are completed within a few days to a couple of weeks, ensuring prompt service with minimal disruption.',
+        },
+        {
+            id: 3,
+            question: 'How do you ensure integrity and compliance throughout the process?',
+            answer:
+                'We adhere to strict industry standards and regulatory guidelines, incorporating expert opinions, comprehensive inspections, and a transparent process to maintain high integrity and full compliance.',
         },
         {
             id: 4,
-            question: 'How do i know whether I am eligibe for your financing option ?',
+            question: 'What factors influence the cost of a borehole drilling project?',
             answer:
-                'You can find out by filling in this evaluation form and one of our sales officers will be in touch with the result. Financing option evaluation form',
+                'Costs depend on several factors such as depth, soil composition, required casing, and site accessibility. We provide a detailed evaluation and transparent pricing before any work begins.',
         },
         {
             id: 5,
-            question: 'Do you take care of all necessary inspections and permits?',
+            question: 'What are the key steps in your borehole drilling process?',
             answer:
-                'Yes we do. With our extensive network of contacts and experience, we are able to facilitate approvals and ensure that each project is in compliance with all government requirements.',
+                'Our process includes a thorough site evaluation, precise drilling, secure casing installation, rigorous water quality testing, and a final assessment to ensure optimal performance and safety.',
         },
         {
             id: 6,
-            question: 'Should i have a design made to get your services?',
+            question: 'How do you handle challenges like low water yield or contamination?',
             answer:
-                'No you don’t have to. we are proud to have a professional architect on our in-house team who can deliver top-quality designs at nearly half the price. We streamline the process by getting your architectural drawings stamped and approved without any extra hassle, making the construction process as smooth and efficient as possible for our clients',
+                'We conduct detailed geological surveys and adapt our drilling techniques to address challenges. Post-drilling, we perform extensive water testing to promptly resolve issues such as low yield or contamination.',
         },
         {
             id: 7,
-            question: 'What is the process for completing the job?',
+            question: 'Do you offer maintenance services after drilling is completed?',
             answer:
-                'The process followed for a project to be complete is; Initiation, Planning, Execution, Monitoring and Completion.',
+                'Yes, we provide ongoing maintenance and support to ensure your borehole continues to function efficiently, addressing any potential issues as part of our commitment to long-term service.',
         },
         {
             id: 8,
-            question: 'How would i know the cost of constructing my dream home ?',
+            question: 'How can I schedule an evaluation for my borehole drilling project?',
             answer:
-                'The cost of your project will vary depending on its size and complexity. To help you navigate the hard costs, we have a professional quantity surveyor on our in-house team who will provide guidance and support throughout the project.',
+                'You can easily schedule an evaluation by contacting us through our website or calling our office. One of our experts will arrange a site visit and provide a tailored assessment for your needs.',
         },
     ],
 };

@@ -15,12 +15,14 @@ import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
 import { IoIosPlay } from 'react-icons/io';
 import {
-    FaTemperatureLow,
-    FaDollarSign,
-    FaVolumeUp,
-    FaShieldAlt,
-    FaLeaf,
-    FaClock,
+    FaMapMarkedAlt,
+    FaTint,
+    FaFlask,
+    FaWrench,
+    FaWarehouse,
+    FaSun,
+    FaRecycle,
+    FaTools,
 } from 'react-icons/fa';
 //import Emailform from '../components/emailform';
 
@@ -39,53 +41,68 @@ import SectionHeader from 'components/section-header';
 const ourServices = [
     {
         id: 1,
-        title: 'Cost Effective',
-        icon: <FaDollarSign />,
+        title: 'Borehole Geological Survey',
+        icon: <FaMapMarkedAlt />,
         description: [
-            'Compared to traditional building products, C-MAX® EPS panels achieve far better results, at considerably reduced cost. Further, the reduced construction period and reduced manpower leads to additional savings and better performances.'
+            'Providing accurate and reliable geological survey reports to inform borehole drilling projects.'
         ],
     },
     {
         id: 2,
-        title: 'Thermal Insulation',
-        icon: <FaTemperatureLow />,
+        title: 'Borehole Drilling',
+        icon: <FaTint />,
         description: [
-            'C-MAX® constructions perform brilliantly in terms of insulation functions, with the thickness and density of the EPS panel being customized to deliver specific thermal insulation requirements, without taking up unnecessary space nor additional costs. C-MAX® buildings can save over 80% of air-conditioning or heating expenses',
+            'Offering expert drilling services to access clean and sustainable water sources for residential and commercial use.'
         ],
     },
     {
         id: 3,
-        title: 'Sound Proofing',
-        icon: <FaVolumeUp />,
+        title: 'Test Pumping',
+        icon: <FaFlask />,
         description: [
-            'C-MAX® EPS panels offer the highest degree of soundproofing according to international acoustic legislation. Apartment and hotel rooms build using C-MAX® EPS products are very soundproof. This represents one the most important advantages of our building system.'
+            'Conducting professional test pumping to assess borehole efficiency and performance, providing insights for optimal usage.'
         ],
     },
-
     {
         id: 4,
-        title: 'Earthquake Resistant',
-        icon: <FaShieldAlt />,
+        title: 'Pump Installation',
+        icon: <FaWrench />,
         description: [
-            'Structures built using C-MAX® EPS Panels technology can withstand, completely undamaged, significant seismic activity. Buildings made using C-MAX® EPS panels are lightweight and hence have a low seismic mass but are at the same time rigid enough due to the presence of two sheets of reinforced plaster that interact to create a monolithic ‘shell’ of the whole structure which makes the building super strong.'
+            'Installing high-quality pumps tailored to specific water needs, ensuring a reliable and efficient water supply.'
         ],
     },
     {
         id: 5,
-        title: 'Sustainability & Energy Efficiency',
-        icon: <FaLeaf />,
+        title: 'Storage Solutions',
+        icon: <FaWarehouse />,
         description: [
-            'The C-MAX® EPS building system helps to achieve high levels of energy efficiency which conform to energy efficiency regulations. It provides significant improvements in indoor thermal comfort through the reduction of energy consumption. Analysis shows that buildings built using M2 technology demonstrate a reduction of 60% in carbon emissions compared to traditional buildings. C-MAX® EPS products are non-toxic and recyclable.'
+            'Offering customizable and durable water storage options to maximize capacity and minimize supply risks.'
         ],
     },
     {
         id: 6,
-        title: 'Rapid Installation',
-        icon: <FaClock />,
+        title: 'Solar Installation',
+        icon: <FaSun />,
         description: [
-            'Buildings constructed using the C-MAX® system show a marked reduction in construction time, estimated at approximately 50%, compared to traditional building methods. Operations on construction sites are stress-free with remarkable reduction in operation time.'
+            'Providing expert solar installation services to power boreholes and water systems sustainably, reducing carbon footprints and energy costs.'
         ],
-    }
+    },
+    {
+        id: 7,
+        title: 'Water Purification',
+        icon: <FaRecycle />,
+        description: [
+            'Implementing advanced purification technologies to ensure access to clean and safe water for consumption.'
+        ],
+    },
+    {
+        id: 8,
+        title: 'Borehole Maintenance & Rehabilitation',
+        icon: <FaTools />,
+        description: [
+            'Offering maintenance and rehabilitation services to sustain optimal borehole performance and efficiency over time.'
+        ],
+    },
 ];
 
 

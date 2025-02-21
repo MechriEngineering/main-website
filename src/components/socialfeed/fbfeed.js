@@ -33,7 +33,7 @@ const FacebookFeed = () => {
         <section sx={styles.section}>
             <div
                 className="fb-page"
-                data-href="https://www.facebook.com/bbsltdke" // Replace with your Facebook Page URL
+                data-href="https://www.facebook.com/profile.php?id=100048407985687" // Replace with your Facebook Page URL
                 data-tabs="timeline"
                 data-width=""
                 data-height=""

@@ -35,18 +35,7 @@ export default function Footer() {
                 {/* Accreditations */}
                 <Box sx={styles.footer.accreditations}>
                   <Heading sx={styles.footer.heading}>Accreditations</Heading>
-                  <Grid sx={styles.footer.accreditationGrid}>
-                    <Image
-                      src={Kpra}
-                      style={{
-                        width: '170px',
-                        height: 'auto',
-                        filter: 'brightness(1.8)'
-                      }}
-                      alt="Kpra Logo"
-                    />
-                    <Image src={Nca} style={{ width: '70px', height: 'auto' }} alt="NCA Logo" />
-                  </Grid>
+                  <Image src={Nca} style={{ width: '70px', height: 'auto' }} alt="NCA Logo" />
                 </Box>
               </Box>
 
@@ -130,7 +119,7 @@ const styles = {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(121, 215, 255, .5)',
+        backgroundColor: 'rgba(121, 215, 255, .9)',
         zIndex: 1,
       },
     },
@@ -223,6 +212,7 @@ const styles = {
       fontWeight: 700,
       mb: [2, null, 3, 2, 3],
       cursor: 'pointer',
+
     },
     icon: {
       color: 'primary',

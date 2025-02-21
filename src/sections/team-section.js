@@ -5,19 +5,16 @@ import SectionHeader from 'components/section-header';
 import TeamCard from 'components/team-card';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-import Member1 from 'assets/team/member-01.jpg';
-import Member2 from 'assets/team/member-02.jpg';
-import Member3 from 'assets/team/member-03.jpg';
-import Member4 from 'assets/team/member-04.jpg';
-import Member5 from 'assets/team/member-05.jpg';
-import Member6 from 'assets/team/member-06.jpg';
+import Member1 from 'assets/team/member-06.jpg';
+import Member2 from 'assets/team/member-06.jpg';
+import Member3 from 'assets/team/member-06.jpg';
 
 const data = [
   {
     id: 1,
     imgSrc: Member1,
-    altText: 'Alice Karanja',
-    title: 'Alice Karanja',
+    altText: 'Sharlyn Kamau',
+    title: 'Sharlyn Kamau',
     designation: 'Managing Director',
     socialProfile: [
       {
@@ -43,8 +40,8 @@ const data = [
   {
     id: 2,
     imgSrc: Member2,
-    altText: 'Joseph Gachinga',
-    title: 'Joseph Gachinga',
+    altText: 'Kelvin Rimui',
+    title: 'Kelvin Rimui',
     designation: 'Technical Director & Lead Contractor',
     socialProfile: [
       {
@@ -70,8 +67,8 @@ const data = [
   {
     id: 3,
     imgSrc: Member3,
-    altText: 'Dobson Waweru',
-    title: 'Dobson Waweru',
+    altText: 'John Kamau',
+    title: 'John Kamau',
     designation: 'Business Development & Marketing Director',
     socialProfile: [
       {
@@ -94,87 +91,7 @@ const data = [
       },
     ],
   },
-  {
-    id: 4,
-    imgSrc: Member4,
-    altText: 'Jocylene Kamau',
-    title: 'Jocylene Kamau',
-    designation: 'Business Strategist',
-    socialProfile: [
-      {
-        id: 1,
-        name: 'facebook',
-        path: '#',
-        icon: <FaFacebookF />,
-      },
-      {
-        id: 2,
-        name: 'twitter',
-        path: '#',
-        icon: <FaTwitter />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
-      },
-    ],
-  },
-  {
-    id: 5,
-    imgSrc: Member5,
-    altText: 'Peter Karanja',
-    title: 'Peter Karanja',
-    designation: 'Sales Executive',
-    socialProfile: [
-      {
-        id: 1,
-        name: 'facebook',
-        path: '#',
-        icon: <FaFacebookF />,
-      },
-      {
-        id: 2,
-        name: 'twitter',
-        path: '#',
-        icon: <FaTwitter />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
-      },
-    ],
-  },
-  {
-    id: 6,
-    imgSrc: Member6,
-    altText: 'Kelvin Rimui',
-    title: 'Kelvin Rimui',
-    designation: 'Head of ICT',
-    socialProfile: [
-      {
-        id: 1,
-        name: 'facebook',
-        path: '#',
-        icon: <FaFacebookF />,
-      },
-      {
-        id: 2,
-        name: 'twitter',
-        path: '#',
-        icon: <FaTwitter />,
-      },
-      {
-        id: 3,
-        name: 'instagram',
-        path: '#',
-        icon: <FaInstagram />,
-      },
-    ],
-  },
+
 ];
 
 export default function TeamSection() {

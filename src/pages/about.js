@@ -14,18 +14,17 @@ export default function AboutPage() {
         <ThemeProvider theme={theme}>
             <StickyProvider>
                 <Layout>
-                    <SEO title="About Us | Jenga Kwako" />
+                    <SEO title="About Us | Mechri Engeenering Solutions" />
 
                     <section sx={styles.banner} id="home">
                         <Container sx={styles.banner.container}>
                             <Box sx={styles.banner.contentBox}>
                                 <Heading as="h1" variant="heroPrimary" sx={styles.titleHeading}>
-                                    EAST OR WEST
-                                    <Text sx={styles.redText}>HOME IS BEST 🏠 </Text>
+                                    DRILLING DEEP,
+                                    <Text sx={styles.redText}>DELIVERING LIFE </Text>
                                 </Heading>
                                 <Text as="p" variant="heroSecondary" sx={styles.titleContent}>
-                                    We are dedicated to turning your home-ownership dreams into reality with our comprehensive A-Z building solutions.
-                                    Together with KMRC, who provide affordable home loans, we guide Kenyans from renting to building their dream homes.
+                                    Harnessing advanced technology and proven expertise, we bring water to the surface—ensuring reliable, clean water solutions that foster growth and resilience.
                                 </Text>
                             </Box>
                         </Container>
