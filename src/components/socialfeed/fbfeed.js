@@ -43,8 +43,8 @@ const FacebookFeed = () => {
                 data-show-facepile="true"
                 sx={styles.facebookFeed}
             >
-                <blockquote cite="https://www.facebook.com/bbsltdke" className="fb-xfbml-parse-ignore">
-                    <a href="https://www.facebook.com/bbsltdke">Benchmark Building Solutions Company LTD</a>
+                <blockquote cite="https://www.facebook.com/profile.php?id=100048407985687" className="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/profile.php?id=100048407985687">Mechri Engeenering Solutions LTD</a>
                 </blockquote>
             </div>
         </section>
