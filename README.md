@@ -1,12 +1,8 @@
-# jenga-kwako-portal
+# Mechri-Engineering-Solutions
 
-## Introduction:
+## Introduction
 
-Jenga Kwako is a comprehensive home-building service tailored to assist individuals in realizing their dream of owning a home. Our services encompass every step of the home-building process, from architectural drawings and cost estimation to obtaining government approvals, laying the foundation, and completing the finishing touches. For clients lacking immediate financing, we connect them with Primary Mortgage Lenders (PMLs) that offer affordable mortgage options, making homeownership accessible to more people.
-
-## Project Overview:
-
-The Jenga Kwako Web Portal aims to create an interactive, user-friendly online platform that streamlines the entire home-building process for our clients. The portal will provide essential information, interactive tools, and a seamless experience from initial inquiries to project completion. This project will be implemented in phases, starting with a Minimum Viable Product (MVP) and progressively adding more features.
+**Mechri Engineering Solutions** is a premier borehole drilling and water solutions provider committed to delivering reliable groundwater access across residential, commercial, and agricultural sectors. Our comprehensive services encompass hydrogeological site assessments, precision drilling, pump installation, water quality testing, and sustainable water system maintenance. For clients requiring specialized solutions, we offer customized drilling configurations and strategic partnerships with water treatment experts to ensure optimal water quality and yield.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 

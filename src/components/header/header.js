@@ -1,13 +1,12 @@
 /** @jsx jsx */
 import { jsx, Container, Flex } from 'theme-ui';
 import { keyframes } from '@emotion/core';
-import Link from 'next/link'; // to navigate to other pages
+import Link from 'next/link';
 import Logo from 'components/logo';
 import LogoDark from 'assets/Mechrilogo.png';
 import { DrawerProvider } from '../../contexts/drawer/drawer.provider';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
-
 
 export default function Header({ className }) {
   return (
@@ -22,8 +21,6 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-
-
           <MobileDrawer />
         </Container>
       </header>
@@ -36,7 +33,6 @@ const positionAnim = keyframes`
     position: fixed;
     opacity: 1;
   }
-
   to {
     position: absolute;
     opacity: 1;
@@ -56,19 +52,13 @@ const styles = {
     backgroundColor: 'transparent',
     transition: 'all 0.4s ease',
     animation: `${positionAnim} 0.4s ease`,
-    '.register__btn': {
-      flexShrink: 0,
-      mr: [15, 20, null, null, 0],
-      ml: ['auto', null, null, null, 0],
-    },
     '&.sticky': {
       position: 'fixed',
       backgroundColor: 'background',
-      color: '#000000',
       boxShadow: '0 1px 2px rgba(0, 0, 0, 0.06)',
       py: 3,
-      'nev > a': {
-        color: 'text',
+      'nav > a': {
+        color: 'text', // Fallback color
       },
     },
   },
@@ -86,7 +76,7 @@ const styles = {
   },
   navLink: {
     textDecoration: 'none',
-    color: 'text',
+    color: 'primary',
     fontSize: 2,
     fontWeight: 'heading',
     px: 5,
@@ -94,10 +84,14 @@ const styles = {
     lineHeight: '1.2',
     transition: 'all 0.15s',
     '&:hover': {
-      color: 'primary',
+      color: 'secondary',
     },
     '&.active': {
-      color: 'primary',
+      color: 'secondary',
+    },
+    // Add scroll-based color transition
+    '.sticky &': {
+      color: 'text',
     },
   },
 };

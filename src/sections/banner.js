@@ -1,11 +1,19 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text } from 'theme-ui';
-import Homebanner from 'assets/homebanner.png';
 
 export default function Banner() {
   return (
     <section sx={styles.banner} id="home">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        sx={styles.video}
+      >
+        <source src='/home.mp4' type="video/mp4" />
+      </video>
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary" sx={styles.titleHeading}>
@@ -23,56 +31,65 @@ export default function Banner() {
 
 const styles = {
   banner: {
-    height: '100vh',
-    pt: ['140px', '145px', '155px', '170px', null, null, '180px', '215px'],
-    pb: [2, null, 0, null, 2, 0, null, 5],
     position: 'relative',
-    mb: 6,
-    zIndex: 2,
+    height: '100vh',
+    width: '100%', // Changed from 100vw to prevent overflow
     overflow: 'hidden',
-    background:
-      'radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(240, 100%, 96%, 1) 100%);',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    '&::before': {
-      position: 'absolute',
+    '&::after': {
       content: '""',
-      top: '10%',
-      height: '100%',
+      position: 'absolute',
+      top: 0,
+      left: 0,
       width: '100%',
-      zIndex: -1,
-      backgroundImage: `url(${Homebanner})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'bottom right',
-      backgroundSize: '25%',
-      '@media screen and (max-width: 768px)': {
-        display: 'none',
-      },
-    },
-    container: {
-      minHeight: 'inherit',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center', // centers horizontally
-      position: 'relative',
+      height: '100%',
+      backgroundColor: 'rgba(14, 46, 123, 0.85)',
       zIndex: 1,
     },
-    contentBox: {
+    container: { // Moved container inside banner
+      position: 'relative',
+      zIndex: 2,
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+    },
+    contentBox: { // Moved contentBox inside banner
       width: ['100%', '90%', '535px', null, '57%', '60%', '68%', '60%'],
       mx: 'auto',
       textAlign: 'center',
-      mb: ['40px', null, null, null, null, 7],
+      color: 'white',
     },
+  },
+  video: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    minWidth: '100%',
+    minHeight: '100%',
+    width: 'auto',
+    height: 'auto',
+    objectFit: 'fit',
+    zIndex: 0,
   },
   orangeText: {
     color: '#eebf21',
+    display: 'block',
   },
   titleHeading: {
-    textAlign: 'center', // centers heading text
+    textAlign: 'center',
+    fontSize: ['32px', '36px', '48px', null, '52px', '60px'],
+    lineHeight: 1.15,
+    color: 'white',
+
   },
   titleContent: {
-    mt: 13,
-    textAlign: 'center', // centers paragraph text
+    mt: [3, 4, 4, 4, 4, 4, 5],
+    fontSize: ['14px', '16px', '18px', '20px'],
+    lineHeight: 1.5,
+    maxWidth: '600px',
+    mx: 'auto',
+    color: 'white',
   },
 };

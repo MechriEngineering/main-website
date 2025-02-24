@@ -14,7 +14,7 @@ export default function Logo({ src, ...rest }) {
       }}
       {...rest}
     >
-      <Image src={src} alt="Jenga Kwako logo" />
+      <Image src={src} alt="Mechri Engeenering Solutions logo" />
     </Link>
   );
 }

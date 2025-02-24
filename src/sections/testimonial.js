@@ -1,40 +1,50 @@
 /** @jsx jsx */
-import { jsx, Container, Heading, Text, Box, Image } from 'theme-ui';
+import { jsx, Container, Heading, Text, Box } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
-import ModalVideo from 'react-modal-video';
-import { IoIosPlay } from 'react-icons/io';
-import { useState } from 'react';
-
 
 const data = [
   {
     id: 1,
-    quote: '"It is not easy if you don\'t have the cash"',
-    name: 'Phylis Wanjiru',
-    videoUrl: 'https://youtu.be/szBXNnu1vPI?si=lHD-yp3dNm-FToDF',
-    videoId: 'szBXNnu1vPI',
-    videoType: 'youtube',
-    thumbnail: `https://img.youtube.com/vi/szBXNnu1vPI/hqdefault.jpg`,
+    name: 'Shaukat Glory',
+    project: 'Mt Kenya Regency Hotel Timau (2021)',
+    services: 'Hydrogeological survey, Drilling, Equipping, and Solarization',
+    quote:
+      'We were highly impressed by the comprehensive survey and precision in drilling and equipping. Their expertise in solarization was a game changer for our hotel infrastructure.',
   },
   {
     id: 2,
-    quote: '"I liked the quality of work"',
-    videoUrl: 'https://www.youtube.com/watch?v=0THiQ6iq3C0&t=4s',
-    name: 'Evans Kiprotich',
-    videoId: '0THiQ6iq3C0',
-    videoType: 'youtube',
-    thumbnail: `https://img.youtube.com/vi/0THiQ6iq3C0/hqdefault.jpg`,
+    name: 'Charles Njihia',
+    project: 'Highview Apartments, Joska Kangundo Road (2022)',
+    services:
+      'Hydrogeological survey, Drilling, Solar-powered pumping system, Steel tank & tower installation',
+    quote:
+      'Their detailed survey and innovative drilling solutions, combined with advanced installation techniques, significantly enhanced our project’s sustainability and efficiency.',
   },
   {
     id: 3,
-    quote: '"We decided not to continue paying rent"',
-    videoUrl: 'https://youtu.be/s0j0MNgvX4U',
-    name: 'Rosemary',
-    videoId: 's0j0MNgvX4U',
-    videoType: 'youtube',
-    thumbnail: `https://img.youtube.com/vi/s0j0MNgvX4U/hqdefault.jpg`,
+    name: 'James Mbiu',
+    project: 'Royal Brains School (2023)',
+    services: '',
+    quote:
+      'The quality and professionalism exhibited during our project exceeded our expectations, setting new industry standards.',
+  },
+  {
+    id: 4,
+    name: 'Margaret Gachigua',
+    project: 'Samtha Heights, Masinga (2023)',
+    services: '',
+    quote:
+      'Their prompt and effective service demonstrated a commitment to quality and reliability that greatly benefited our project.',
+  },
+  {
+    id: 5,
+    name: 'Joseph Gacheru',
+    project: "Joe's Apartment, Thindigua Kiambu (2022)",
+    services: '',
+    quote:
+      'Their expertise and dedication were clearly evident in the successful completion of our project. We highly recommend their services.',
   },
 ];
 
@@ -42,36 +52,26 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1619 },
     items: 4,
-    slidesToSlide: 4, // optional, default to 1.
+    slidesToSlide: 4,
   },
   laptop: {
     breakpoint: { max: 1619, min: 1024 },
     items: 3,
-    slidesToSlide: 3, // optional, default to 1.
+    slidesToSlide: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 640 },
     items: 2,
-    slidesToSlide: 2, // optional, default to 1.
+    slidesToSlide: 2,
   },
   mobile: {
     breakpoint: { max: 639, min: 0 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
 };
 
 export default function TestimonialCard() {
-  const [videoOpen, setVideoOpen] = useState(false);
-  const [videoId, setVideoId] = useState('');
-  const [videoType, setVideoType] = useState('');
-
-  const handleVideoOpen = (videoId, videoType) => {
-    setVideoId(videoId);
-    setVideoType(videoType);
-    setVideoOpen(true);
-  };
-
   return (
     <section id="testimonial" sx={{ variant: 'section.testimonial' }}>
       <Container css={{ textAlign: 'center' }}>
@@ -102,43 +102,22 @@ export default function TestimonialCard() {
         >
           {data.map((item) => (
             <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
-              <Box sx={styles.thumbnailWrapper} onClick={() => handleVideoOpen(item.videoId, item.videoType)}>
-                <Image src={item.thumbnail} sx={styles.thumbnail} />
-                <Box sx={styles.playButton}>
-                  <IoIosPlay size="30px" color="white" />
-                </Box>
-              </Box>
-              <div className="card-footer">
-                <div className="reviewer-info">
-                  <Heading as="h3" sx={styles.heading}>
-                    {item.name}
-                  </Heading>
-                  <Heading as="h4" sx={styles.quote}>
-                    {item.quote}
-                  </Heading>
-                  <Text sx={styles.designation}>{item.designation}</Text>
-                </div>
+              <div className="card-content">
+                <Heading as="h4" sx={styles.quote}>
+                  {item.quote}
+                </Heading>
+                <Heading as="h3" sx={styles.heading}>
+                  {item.name}
+                </Heading>
+                <Text sx={styles.designation}>{item.project}</Text>
+                {item.services && (
+                  <Text sx={styles.description}>{item.services}</Text>
+                )}
               </div>
             </Box>
           ))}
         </Carousel>
       </Box>
-      {videoType === 'youtube' && (
-        <ModalVideo
-          channel="youtube"
-          isOpen={videoOpen}
-          videoId={videoId}
-          onClose={() => setVideoOpen(false)}
-        />
-      )}
-      {videoType === 'facebook' && (
-        <ModalVideo
-          channel="facebook"
-          isOpen={videoOpen}
-          videoId={videoId}
-          onClose={() => setVideoOpen(false)}
-        />
-      )}
     </section>
   );
 }
@@ -177,16 +156,20 @@ const styles = {
     },
   },
   reviewCard: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '350px', // Fixed height for uniformity
     boxShadow: '0px 0px 1px rgba(38, 78, 118, 0.35)',
     transition: 'all 0.3s',
     borderRadius: '6px',
     p: [
-      '30px 20px 35px',
-      '30px 25px 35px',
-      '30px 20px 35px',
-      '35px 30px 40px 40px',
-      '30px 30px 35px',
-      '35px 30px 40px 40px',
+      '30px 20px 40px',
+      '30px 25px 40px',
+      '30px 20px 40px',
+      '35px 30px 45px 40px',
+      '30px 30px 40px',
+      '35px 30px 45px 40px',
     ],
     bg: 'white',
     textAlign: 'left',
@@ -200,88 +183,6 @@ const styles = {
     '&:hover': {
       boxShadow: '0px 6px 30px rgba(38, 78, 118, 0.1)',
     },
-    '.rating': {
-      mb: [1, null, null, 2],
-      ul: {
-        pl: 0,
-        listStyle: 'none',
-        mb: 0,
-        display: 'flex',
-      },
-      svg: {
-        marginRight: '2px',
-        '&:last-of-type': {
-          marginRight: 0,
-        },
-      },
-      '.star': {
-        color: 'primary',
-        mr: '1px',
-      },
-      '.star-o': {
-        color: '#ddd',
-        mr: '1px',
-      },
-    },
-    '.card-footer': {
-      display: 'flex',
-      alignItems: 'center',
-      marginTop: [5, null, null, '33px'],
-      '.image': {
-        flexShrink: 0,
-        mr: [3, null, null, 4],
-        display: 'flex',
-        img: {
-          width: '55px',
-          height: '55px',
-          borderRadius: '50%',
-          objectFit: 'cover',
-        },
-      },
-    },
-  },
-  thumbnailWrapper: {
-    position: 'relative',
-    cursor: 'pointer',
-    '&:hover .playButton': {
-      backgroundColor: 'dark',
-    },
-  },
-  thumbnail: {
-    width: '100%',
-    height: 'auto',
-    display: 'block',
-    borderRadius: '6px',
-  },
-  playButton: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '60px',
-    height: '60px',
-    borderRadius: '50%',
-    backgroundColor: 'rgba(46, 134, 193, 0.5)', // transparent blue
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s',
-    animation: 'pulse 2s infinite', // add pulse effect
-    '@keyframes pulse': {
-      '0%': {
-        boxShadow: '0 0 0 0 rgba(255, 0, 0, 0.7)', // red pulse start
-      },
-      '70%': {
-        boxShadow: '0 0 0 20px rgba(255, 0, 0, 0)', // red pulse end
-      },
-      '100%': {
-        boxShadow: '0 0 0 0 rgba(255, 0, 0, 0)', // red pulse reset
-      },
-    },
-    '& svg': {
-      color: 'white', // white play icon
-    },
   },
   quote: {
     fontSize: [1, 2],
@@ -289,12 +190,14 @@ const styles = {
     mb: [3, null, null, '22px'],
     color: 'text',
     lineHeight: 1.6,
+    fontStyle: 'italic',
   },
   description: {
     fontSize: [1, null, null, 2],
     fontWeight: 'normal',
     color: 'text',
     lineHeight: [1.85, null, 2],
+    mt: '10px',
   },
   heading: {
     fontSize: [1, null, null, 2],
@@ -302,6 +205,7 @@ const styles = {
     mb: '3px',
     color: 'text',
     lineHeight: 1.3,
+    mt: '10px',
   },
   designation: {
     color: 'primary',

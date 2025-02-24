@@ -14,19 +14,19 @@ export default {
     heading: 'Useful Links',
     quickLinks: [
       {
-        path: '/sampleplans',
+        path: '/about',
         label: 'About Us'
       },
       {
-        path: 'https://bbsltd.co.ke/kagaa-project/',
+        path: '/epstechnology',
         label: 'Our Services'
       },
       {
-        path: 'https://bbsltd.co.ke/gallery/',
+        path: '/contact',
         label: 'Frequently Asked Questions'
       },
       {
-        path: 'https://bbsltd.co.ke/diaspora-building-solutions/',
+        path: '/contact',
         label: 'Contact Us'
       },
 
@@ -40,7 +40,7 @@ export default {
         label: 'Company profile'
       },
       {
-        path: '/downloadables/JK-Requirements-Checklist.pdf',
+        path: '#',
         label: 'Requirements checklist'
       },
 

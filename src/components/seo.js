@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function SEO({
-  description = 'Jenga Kwako portal',
+  description = 'Mechri Engeenering Solutions LTD website',
   author = 'AlphaTech Insights',
   meta,
-  title = 'Jenga Kwako | Benchmark Building Solutions ltd',
+  title = 'Mechri Engeenering Solutions LTD',
 }) {
   const metaData = [
     {
