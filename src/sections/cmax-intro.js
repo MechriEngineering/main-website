@@ -41,7 +41,7 @@ import SectionHeader from 'components/section-header';
 const ourServices = [
     {
         id: 1,
-        title: 'Borehole Geological Survey',
+        title: 'Borehole Hydrogeological Survey',
         icon: <FaMapMarkedAlt />,
         description: [
             'Providing accurate and reliable geological survey reports to inform borehole drilling projects.'

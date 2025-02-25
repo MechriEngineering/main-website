@@ -7,12 +7,12 @@ import FeatureThumb from 'assets/pump installation.webp';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
-  subTitle: 'CEO',
-  title: 'Sharlyn Kamau',
+  subTitle: 'Managing Director',
+  title: 'Sharlynne Kamau',
   description:
     'My gratification as a borehole drilling professional of more than 10 years is the joy my clients experience when I hand over the project. We are dedicated to providing services that are nothing short of excellent',
   btnName: 'Our Services',
-  btnURL: 'http://localhost:3000/epstechnology',
+  btnURL: '/ourservices',
 };
 
 export default function CoreFeature() {

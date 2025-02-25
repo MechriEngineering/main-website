@@ -36,7 +36,7 @@ const SliderEffect = () => {
     );
 };
 
-export default function EpsTechnologyPage() {
+export default function Ourservices() {
     return (
         <ThemeProvider theme={theme}>
             <StickyProvider>

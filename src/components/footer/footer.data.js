@@ -18,7 +18,7 @@ export default {
         label: 'About Us'
       },
       {
-        path: '/epstechnology',
+        path: '/ourservices',
         label: 'Our Services'
       },
       {
@@ -59,7 +59,7 @@ export default {
       },
       {
         icon: FaMapMarkerAlt,
-        info: 'Limuru road, Nairobi, Kenya'
+        info: 'Embly Business park, along Eastern Bypass'
       },
     ],
   },

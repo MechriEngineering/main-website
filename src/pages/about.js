@@ -31,7 +31,7 @@ export default function AboutPage() {
                     </section>
 
                     <FeaturedProject />
-                    <TeamSection />
+                    {/**<TeamSection /> */}
                 </Layout>
             </StickyProvider>
         </ThemeProvider>

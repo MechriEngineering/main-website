@@ -85,6 +85,7 @@ const styles = {
     mt: [3, 4],
     gap: [3, 4],
     gridTemplateColumns: ['repeat(1, 1fr)'],
+    textAlign: 'left'
   },
   card: {
     display: 'flex',

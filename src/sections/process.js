@@ -26,9 +26,9 @@ const data = [
   },
   {
     id: 4,
-    title: 'Pumping Test, Equipping & Handover',
+    title: 'Pumping Test, Equipping, Storage solutions & Handover',
     text:
-      'A pumping test is carried out to determine the borehole’s yield. We then install the necessary pumping system, conduct final quality checks, and hand over a fully operational borehole.',
+      'A pumping test is carried out to determine the borehole’s yield. We then install the necessary pumping system and integrate advanced water storage solutions to ensure a continuous, reliable water supply. After conducting final quality checks, we hand over a fully operational borehole.',
   },
 ];
 

@@ -12,9 +12,10 @@ import D from 'assets/Kagaa project media/4.webp';
 import E from 'assets/Kagaa project media/5.webp';
 import F from 'assets/Kagaa project media/6.webp';
 import G from 'assets/Kagaa project media/7.jpg';
+import H from 'assets/Kagaa project media/8.jpg';
 
 // Array of images
-const images = [A, B, C, D, E, F, G];
+const images = [A, B, C, D, E, F, G, H];
 
 const responsive = {
     desktop: {
