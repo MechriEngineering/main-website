@@ -1,10 +1,18 @@
 /** @jsx jsx */
 import { useRef, useState } from 'react';
+import fetch from 'isomorphic-unfetch';
 import { jsx } from 'theme-ui';
-import { Box, Button, Input, Text, Heading, Textarea, Flex } from 'theme-ui';
+import {
+  Container, Flex, Box, Button, Input, Text, Heading,
+  Textarea
+} from 'theme-ui';
 import axios from 'axios';
 
 export default function ContactForm() {
+  const nameInputEl = useRef(null);
+  const emailInputEl = useRef(null);
+  const messageInputEl = useRef(null);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,6 +21,7 @@ export default function ContactForm() {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
+
     error: null,
   });
 
@@ -22,48 +31,47 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus({ ...status, submitting: true });
+    setStatus({
+      ...status,
+      submitting: true
+    });
 
     try {
-      const res = await axios.post(
-        'https://mechriengineering.co.ke/contact.php',
-        formData,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        }
-      );
+      const res = await axios.post('https://mechriengineering.co.ke/contact.php', formData, {
+        headers: { 'Content-Type': 'application/json' }
+      });
 
       if (res.status === 200) {
         setStatus({
-          submitted: true,
-          submitting: false,
-          error: null
+          submitted: true, submitting: false, error: null
         });
-        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus({ submitted: false, submitting: false, error: 'Oops! an error occured' });
       }
     } catch (error) {
-      const errorMsg = error.response?.data?.error || 'Connection error. Please try again later.';
-      setStatus({
-        submitted: false,
-        submitting: false,
-        error: errorMsg
-      });
+      console.error('Error submitting form:', error);
+      setStatus({ submitted: false, submitting: false, error: 'Oops! an error occured' });
     }
   };
 
   return (
+
+
     <Box sx={styles.contentBox}>
       <Box sx={styles.contentBoxInner}>
-        <Heading as="h2" sx={styles.title}>Email Us</Heading>
+        <Heading as="h2" sx={styles.title}>
+          Email Us
+        </Heading>
         <Text as="p" sx={styles.description}>
-          Feel free to reach out to us with any inquiries or feedback. We will be happy to respond.
+          Feel free to reach out to us with any inquiries or feedback. We will be happy to respond
         </Text>
         <form onSubmit={handleSubmit}>
           <Flex sx={styles.form}>
+            <label htmlFor="name" sx={{ variant: 'styles.srOnly' }}>
+              Full Name
+            </label>
             <Input
+              ref={nameInputEl}
               id="name"
               name="name"
               type="text"
@@ -72,7 +80,11 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
             />
+            <label htmlFor="email" sx={{ variant: 'styles.srOnly' }}>
+              Email Address
+            </label>
             <Input
+              ref={emailInputEl}
               id="email"
               name="email"
               type="email"
@@ -81,7 +93,11 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
             />
+            <label htmlFor="message" sx={{ variant: 'styles.srOnly' }}>
+              Message
+            </label>
             <Textarea
+              ref={messageInputEl}
               id="message"
               name="message"
               placeholder="Your Message"
@@ -91,18 +107,23 @@ export default function ContactForm() {
               rows={4}
             />
           </Flex>
-          {status.error && <Text sx={{ color: 'red', mt: 2 }}>{status.error}</Text>}
-          {status.submitted && <Text sx={{ color: 'green', mt: 2 }}>Message sent successfully!</Text>}
+          {status.error && <div className="error">{status.error}</div>}
+          {status.submitted && <div className="success">Message sent successfully!</div>}
+
           <Button
             sx={styles.submitButton}
             type="submit"
             disabled={status.submitting}
+            className="form__btn"
+            aria-label="Submit"
           >
             {status.submitting ? 'Sending...' : 'Submit'}
           </Button>
         </form>
       </Box>
     </Box>
+
+
   );
 }
 
