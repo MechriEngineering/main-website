@@ -37,8 +37,8 @@ export default function ContactForm() {
     });
 
     try {
-      const res = await axios.post('https://mechriengineering.co.ke/contact.php', formData, {
-        headers: { 'Content-Type': 'application/json' }
+      const res = await axios.post('https://mechriengineering.co.ke/contact.php', new URLSearchParams(formData), {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
 
       if (res.status === 200) {
