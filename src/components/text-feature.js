@@ -53,7 +53,7 @@ const styles = {
     mt: -1,
     subTitle: {
       fontSize: [0, null, 1],
-      color: 'primary',
+      color: 'accent',
       textTransform: 'uppercase',
       fontWeight: '700',
       mb: [2, 3],
@@ -62,7 +62,7 @@ const styles = {
     },
     title: {
       fontSize: ['24px', null, '28px', '30px', '36px', '42px', null, '48px'],
-      color: 'heading_secondary',
+      color: 'white',
       lineHeight: [1.3, null, null, null, 1.2],
       fontWeight: '700',
       letterSpacing: '-.5px',

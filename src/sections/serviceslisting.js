@@ -1,19 +1,6 @@
-import React, { useRef, useState } from 'react';
 /** @jsx jsx */
-import {
-    jsx,
-    Container,
-    Box,
-    Grid,
-    Text,
-    Heading,
-    Button,
-    Image,
-} from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import TextFeature from 'components/text-feature';
-import ModalVideo from 'react-modal-video';
-import { IoIosPlay } from 'react-icons/io';
+import { jsx, Container, Box, Grid, Text, Heading } from 'theme-ui';
+import SectionHeader from 'components/section-header';
 import {
     FaMapMarkedAlt,
     FaTint,
@@ -24,19 +11,6 @@ import {
     FaRecycle,
     FaTools,
 } from 'react-icons/fa';
-//import Emailform from '../components/emailform';
-
-import DescriptionThumb from 'assets/epsintrothumb.png';
-import shapePattern from 'assets/shape-pattern1.png';
-import CommercialEPS from 'assets/commercial.jpg';
-import ResidentialEPS from 'assets/residential.jpg';
-import IndustrialEPS from 'assets/industrial.jpg';
-import InstitutionEPS from 'assets/institutions.jpg';
-
-
-import SectionHeader from 'components/section-header';
-
-
 
 const ourServices = [
     {
@@ -105,62 +79,37 @@ const ourServices = [
     },
 ];
 
-
-export default function Epspanels() {
-
+export default function Services() {
     return (
-        <>
-
-            <section>
-                <Container sx={styles.section}>
-                    <SectionHeader slogan="What do we offer?" title="Our Services" />
-                    <Grid sx={styles.advantagesGrid}>
-                        {ourServices.map((item) => (
-                            <Box key={item.id} sx={styles.card}>
-                                {/* Placeholder for icon */}
-                                <Box sx={styles.icon}>{item.icon}</Box>
-                                <Heading as="h3" sx={styles.cardTitle}>
-                                    {item.title}
-                                </Heading>
-                                <Text sx={styles.cardText}>
-                                    {item.description}
-                                </Text>
-                            </Box>
-                        ))}
-                    </Grid>
-                </Container>
-            </section>
-        </>
+        <section>
+            <Container sx={styles.section}>
+                <SectionHeader slogan="What do we offer?" title="Our Services" />
+                <Grid sx={styles.advantagesGrid}>
+                    {ourServices.map((item) => (
+                        <Box key={item.id} sx={styles.card}>
+                            <Box sx={styles.icon}>{item.icon}</Box>
+                            <Heading as="h3" sx={styles.cardTitle}>
+                                {item.title}
+                            </Heading>
+                            <Text sx={styles.cardText}>
+                                {item.description}
+                            </Text>
+                        </Box>
+                    ))}
+                </Grid>
+            </Container>
+        </section>
     );
 }
 
-const playPulse = keyframes`
-  from {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    opacity: 1;
-  }
-
-  to {
-	transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    opacity: 0;
-  }
-`;
-
 const styles = {
-
-    //section 2 styling
     section: {
-        pt: [8, null, 9], // Adds more space on top
+        pt: '180px', // Adds more space on top
         pb: [4, null, 5], // Keeps the bottom padding unchanged
     },
     advantagesGrid: {
         display: 'grid',
         gridTemplateColumns: ['1fr', null, 'repeat(3, 1fr)'],
-        gap: '20px',
-    },
-    applicationGrid: {
-        display: 'grid',
-        gridTemplateColumns: ['1fr', null, 'repeat(2, 1fr)'],
         gap: '20px',
     },
     card: {
@@ -189,11 +138,4 @@ const styles = {
         fontSize: ['14px', null, '16px'],
         color: 'text',
     },
-    cardImage: {
-        width: '100%',
-        height: '200px',
-        objectFit: 'cover',
-        borderRadius: '8px 8px 0 0',
-        mb: '15px',
-    },
-}
+};

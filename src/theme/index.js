@@ -1,32 +1,31 @@
 export default {
-
   //smooth scroll
 
-  // example colors with dark mode
+  // updated colors with new palette
   colors: {
-    text: '#343D48', // body color and primary color
-    text_secondary: '#02073E', // secondary body color
-    heading: '#79d7ff', // primary heading color
-    heading_secondary: '#79d7ff', // heading color
-    background: '#FFFFFF', // body background color
-    background_secondary: '#F9FBFD', // secondary background color
-    border_color: '#E5ECF4', // border color
-    yellow: '#FFA740', // border color
-    primary: '#eebf21', // primary button and link color
-    secondary: '#79d7ff', // secondary color - can be used for hover states
-    muted: '#E4E4E4', // muted color
-    accent: '#609', // a contrast color for emphasizing UI
-    blue: '#79d7ff',
-    orange: '#eebf21',
+    text: '#222b5e', // primary text color (dark navy)
+    text_secondary: '#1a4e89', // secondary text color (deep blue)
+    heading: '#222b5e', // primary heading color (dark navy)
+    heading_secondary: '#1a4e89', // secondary heading color (deep blue)
+    background: '#FFFFFF', // body background color (unchanged for clean look)
+    background_secondary: '#F5F7FA', // subtle off-white for secondary background
+    border_color: '#E5ECF4', // unchanged for neutral borders
+    yellow: '#e0b81a', // accent yellow for highlights
+    primary: '#0aa0eb', // primary button and link color (vibrant blue)
+    secondary: '#1a4e89', // secondary color for hover states (deep blue)
+    muted: '#D9E0E7', // muted color for subtle elements
+    accent: '#e0b81a', // accent for emphasizing UI (yellow)
+    blue: '#0aa0eb', // vibrant blue for consistency
+    orange: '#e0b81a', // updated to new yellow instead of old orange
 
-    // highlight	a background color for highlighting text
+    // updated dark mode
     modes: {
       dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0cf',
-        secondary: '#09c',
-        muted: '#111',
+        text: '#FFFFFF', // white for readability
+        background: '#222b5e', // dark navy for background
+        primary: '#0aa0eb', // vibrant blue for primary elements
+        secondary: '#e0b81a', // yellow for secondary elements
+        muted: '#3c4b7a', // lighter navy for muted elements
       },
     },
   },
@@ -40,10 +39,8 @@ export default {
     '1620px',
   ],
   fonts: {
-    //body: "'DM Sans', sans-serif",
-    body: "'Be Vietnam Pro', sans-serif",
-    heading: "'Be Vietnam Pro', sans-serif",
-    //heading: "'DM Sans', sans-serif",
+    body: "'DM Sans', sans-serif",
+    heading: "'DM Sans', sans-serif",
   },
   fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 64],
   fontWeights: {
@@ -61,7 +58,6 @@ export default {
     heading: '-0.5px',
   },
   space: [0, 5, 10, 15, 20, 25, 30, 50, 80, 100, 120, 150],
-  // variants can use custom, user-defined names
   layout: {
     container: {
       maxWidth: [
@@ -77,7 +73,7 @@ export default {
       px: [4, 6],
     },
     header: {
-      color: '#02073E',
+      color: '#222b5e', // updated to dark navy
       fontWeight: 'normal',
       py: 3,
       position: 'absolute',
@@ -143,10 +139,9 @@ export default {
       letterSpacing: '-.5px',
       textTransform: 'uppercase',
     },
-
     subTitle: {
       fontSize: [0, '13px', null, '14px'],
-      color: 'primary',
+      color: 'primary', // updated to vibrant blue
       textAlign: 'center',
       letterSpacing: ['1.5px', null, '2px'],
       textTransform: 'uppercase',
@@ -162,10 +157,10 @@ export default {
       fontWeight: 'heading',
       fontSize: [4],
       letterSpacing: '-.55px',
-      color: 'heading',
+      color: 'heading', // updated to dark navy
     },
     heroPrimary: {
-      color: 'heading',
+      color: 'heading', // updated to dark navy
       fontSize: [
         '32px',
         '36px',
@@ -185,12 +180,9 @@ export default {
       lineHeight: [1.9, null, null, 2],
       fontWeight: 'body',
       mb: 5,
-      //px: [0, null, 5, 6, null, 8, 9],
-      //px: [0, null, 4, 6, null, 8, 0],
-      color: 'heading',
+      color: 'heading', // updated to dark navy
     },
     title: {
-      // extends the text.heading styles
       variant: 'text.heading',
       fontWeight: 'bold',
       fontSize: [3, null, 4],
@@ -199,11 +191,11 @@ export default {
     },
     lead: {
       fontSize: 40,
-      fontFamily: 'Be Vietnam Pro',
+      fontFamily: 'DM Sans', // updated to match body font
       fontWeight: '500',
       lineHeight: '60px',
       letterSpacing: '-1.5px',
-      color: '#0F2137',
+      color: '#222b5e', // updated to dark navy
     },
     muted: {
       lineHeight: '26px',
@@ -211,7 +203,7 @@ export default {
     },
     secondary: {
       fontWeight: 500,
-      color: '#00A99D',
+      color: '#0aa0eb', // updated to vibrant blue
       lineHeight: '40px',
     },
   },
@@ -235,7 +227,7 @@ export default {
       fontSize: 'inherit',
       transition: 'color 0.25s',
       '&:hover': {
-        color: 'primary',
+        color: 'primary', // updated to vibrant blue
       },
     },
     footer: {
@@ -255,12 +247,10 @@ export default {
       borderRadius: 99999,
     },
   },
-  // variants for buttons
   buttons: {
     menu: {
       display: [null, null, 'none'],
-    }, // default variant for MenuButton
-    // you can reference other values defined in the theme
+    },
     defaultBtn: {
       borderRadius: '45px',
       fontSize: ['14px', null, null, 2],
@@ -278,14 +268,14 @@ export default {
     primary: {
       variant: 'buttons.defaultBtn',
       color: 'white',
-      bg: 'primary',
+      bg: 'primary', // updated to vibrant blue
       '&:hover': {
-        boxShadow: 'rgba(233, 76, 84, 0.57) 0px 9px 20px -5px',
+        boxShadow: 'rgba(10, 160, 235, 0.57) 0px 9px 20px -5px', // updated shadow to match primary
       },
     },
     whiteButton: {
       variant: 'buttons.defaultBtn',
-      color: 'heading_secondary',
+      color: 'heading_secondary', // updated to deep blue
       bg: 'white',
       '&:hover': {
         boxShadow: 'rgba(0, 0, 0, 0.5) 0px 12px 24px -10px',
@@ -294,13 +284,13 @@ export default {
     secondary: {
       variant: 'buttons.defaultBtn',
       border: '2px solid',
-      borderColor: 'primary',
-      color: 'primary',
+      borderColor: 'primary', // updated to vibrant blue
+      color: 'primary', // updated to vibrant blue
       bg: 'transparent',
       padding: ['10px 15px', null, '15px 30px'],
       '&:hover': {
         color: 'white',
-        bg: 'primary',
+        bg: 'primary', // updated to vibrant blue
       },
     },
     textButton: {
@@ -313,7 +303,6 @@ export default {
         mr: 2,
       },
     },
-
   },
   cards: {
     primary: {
@@ -349,37 +338,33 @@ export default {
       borderColor: 'border_color',
       height: 60,
       '&:focus': {
-        borderColor: 'primary',
-        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        borderColor: 'primary', // updated to vibrant blue
+        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`, // updated to vibrant blue
         outline: 'none',
       },
     },
   },
-
   badges: {
     primary: {
       color: 'background',
-      bg: '#28A5FF',
+      bg: '#0aa0eb', // updated to vibrant blue
       borderRadius: 30,
       p: '3px 11px',
       fontSize: 1,
       letterSpacing: '-0.5px',
     },
     outline: {
-      color: 'primary',
+      color: 'primary', // updated to vibrant blue
       bg: 'transparent',
       boxShadow: 'inset 0 0 0 1px',
     },
   },
-
   styles: {
-    // To add base, top-level styles to the <body> element, use theme.styles.root.
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
       fontSmoothing: 'antialiased',
-      // Modal Global Style
       '.modal-video-close-btn': {
         cursor: 'pointer',
       },
@@ -388,24 +373,19 @@ export default {
         width: 'auto',
       },
     },
-
-    // Add keyframes for the typewriter effect
     '@keyframes typewriter': {
       from: { width: '0%' },
       to: { width: '100%' },
     },
-
     '@keyframes blinkCaret': {
       'from, to': { borderColor: 'transparent' },
       '50%': { borderColor: 'currentColor' },
     },
-
-    // Add the typewriter effect styles
     '.typewriter': {
       display: 'inline-block',
       overflow: 'hidden',
       whiteSpace: 'nowrap',
-      borderRight: '0.15em solid', // Blink caret effect
+      borderRight: '0.15em solid',
       animation: 'blinkCaret 0.7s step-end infinite',
       '&:nth-of-type(1)': {
         width: '8ch',
@@ -420,14 +400,11 @@ export default {
         animation: 'typewriter 2s steps(8) 5s 1 normal both, blinkCaret 0.7s step-end infinite',
       },
     },
-
-    // Divider styles
     hr: {
       border: 0,
       borderBottom: '1px solid',
       borderColor: '#D9E0E7',
     },
-    // also you can use other HTML elements style here
     ul: {
       listStyle: 'none',
     },
@@ -444,4 +421,4 @@ export default {
       whiteSpace: 'nowrap !important',
     },
   },
-};
+}

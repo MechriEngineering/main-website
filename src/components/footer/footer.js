@@ -3,8 +3,6 @@ import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
 import Link from 'next/link'; // to navigate to other pages
 import data from './footer.data';
 import { FaChevronRight } from 'react-icons/fa';
-
-import Kpra from 'assets/kpra.png';
 import Nca from 'assets/NCA.png';
 import Footerbg from 'assets/footerbg1.jpg';
 
@@ -119,7 +117,7 @@ const styles = {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(121, 215, 255, .9)',
+        backgroundColor: 'rgba(14, 46, 123, 0.85)',
         zIndex: 1,
       },
     },
@@ -173,7 +171,7 @@ const styles = {
       },
     },
     contactIcon: {
-      color: 'primary',
+      color: 'accent',
       marginRight: '10px',
     },
     socialGrid: {
@@ -193,7 +191,7 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      color: 'primary',
+      color: 'accent',
       fontSize: 24,
       mb: '10px',
       transition: 'all 0.25s',
@@ -207,7 +205,7 @@ const styles = {
     },
     heading: {
       fontSize: 3,
-      color: 'primary',
+      color: 'accent',
       lineHeight: 1.4,
       fontWeight: 700,
       mb: [2, null, 3, 2, 3],
@@ -215,7 +213,7 @@ const styles = {
 
     },
     icon: {
-      color: 'primary',
+      color: 'accent',
       marginRight: '8px',
     },
 

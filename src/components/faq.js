@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { useState } from 'react';
-import { jsx, Box, Heading, Text, Container } from 'theme-ui';
+import { jsx, Box, Heading, Text, Container, Link } from 'theme-ui';
 
 const faqData = {
-    title: "FAQ's (Frequently Asked Questions)",
+    title: "Frequently Asked Questions",
+    subtitle: 'Ask us anything !',
     content: [
         {
             id: 1,
@@ -64,58 +65,95 @@ const FAQComponent = () => {
     };
 
     return (
-
-        <Box sx={styles.faqSection}>
-            <Box sx={styles.faqContent}>
-                <Heading as="h2" sx={styles.title}>
-                    {faqData.title}
-                </Heading>
-
-                {faqData.content.map((item) => (
-                    <Box key={item.id} sx={styles.faqItem}>
-                        <Box sx={styles.question} onClick={() => handleToggle(item.id)}>
-                            {activeId !== item.id && <span sx={styles.plusIcon}>+</span>}
-                            {item.question}
-
-                        </Box>
-                        <Box
-                            sx={{
-                                ...styles.answer,
-                                maxHeight: activeId === item.id ? '200px' : '0',
-                                opacity: activeId === item.id ? 1 : 0,
-                                transition: 'max-height 0.3s ease, opacity 0.3s ease',
-                            }}
-                        >
-                            <Text>{item.answer}</Text>
-                        </Box>
+        <Container sx={styles.faqSection}>
+            <Box sx={styles.faqWrapper}>
+                <Box sx={styles.leftColumn}>
+                    <Box sx={styles.leftContent}>
+                        <Heading as="h2" sx={styles.title}>
+                            {faqData.title}
+                        </Heading>
+                        <Heading as="h3" sx={styles.subtitle}>
+                            {faqData.subtitle}
+                        </Heading>
+                        <Link href="mailto:info@mechriengineering.co.ke" sx={styles.emailLink}>
+                            info@mechriengineering.co.ke
+                        </Link>
                     </Box>
-                ))}
+                </Box>
+                <Box sx={styles.rightColumn}>
+                    {faqData.content.map((item) => (
+                        <Box key={item.id} sx={styles.faqItem}>
+                            <Box sx={styles.question} onClick={() => handleToggle(item.id)}>
+                                {activeId !== item.id && <span sx={styles.plusIcon}>+</span>}
+                                {item.question}
+                            </Box>
+                            <Box
+                                sx={{
+                                    ...styles.answer,
+                                    maxHeight: activeId === item.id ? '200px' : '0',
+                                    opacity: activeId === item.id ? 1 : 0,
+                                    transition: 'max-height 0.3s ease, opacity 0.3s ease',
+                                }}
+                            >
+                                <Text>{item.answer}</Text>
+                            </Box>
+                        </Box>
+                    ))}
+                </Box>
             </Box>
-        </Box>
-
+        </Container>
     );
 };
 
 const styles = {
     faqSection: {
-        p: 4,
-        py: ['60px', null, 8],
-        boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-        borderRadius: 10,
+        p: 6,
+        py: ['10px', null, 8],
+        px: [5, null, 6],
     },
-    title: {
-        fontSize: 4,
-        fontWeight: 'bold',
-        mb: 4,
-        color: 'secondary',
+    faqWrapper: {
+        display: 'flex',
+        flexDirection: ['column', null, 'row'],
+        gap: 4,
+        minHeight: '400px',
     },
-    faqContent: {
+    leftColumn: {
+        flex: ['1', null, '1 1 40%'],
         display: 'flex',
         flexDirection: 'column',
-        width: ['100%', null, '540px', '600px'],
-        mx: 'auto',
-        mt: -1,
-        px: [3, 5],
+        justifyContent: 'center',
+    },
+    leftContent: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'left',
+        textAlign: 'left',
+    },
+    rightColumn: {
+        flex: ['1', null, '1 1 60%'],
+        mt: [4, null, 0],
+    },
+    title: {
+        fontSize: [9, null, 10],
+        fontWeight: 900, // Increased font weight (use 700 for bold)
+        mb: 5,
+        letterSpacing: '-0.05em',
+        color: 'secondary',
+    },
+    subtitle: {
+        fontSize: [3, null, 4],
+        fontWeight: 'normal',
+        mb: 5,
+        color: 'text',
+    },
+    emailLink: {
+        fontSize: 4,
+        fontWeight: 'bold',
+        color: 'accent',
+        textDecoration: 'none',
+        '&:hover': {
+            textDecoration: 'underline',
+        },
     },
     faqItem: {
         mb: 3,
@@ -128,7 +166,7 @@ const styles = {
         cursor: 'pointer',
         position: 'relative',
         '&:hover': {
-            color: 'primary',
+            color: 'accent',
         },
         '&:after': {
             content: '"+"',
@@ -139,7 +177,7 @@ const styles = {
     },
     plusIcon: {
         mr: 2,
-        color: 'primary',
+        color: 'accent',
     },
     answer: {
         mt: 2,

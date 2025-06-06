@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text } from 'theme-ui';
+import AboutSection from '../sections/about-section';
 
 export default function Banner() {
   return (
@@ -14,8 +15,10 @@ export default function Banner() {
       >
         <source src='/home.mp4' type="video/mp4" />
       </video>
+
       <Container sx={styles.banner.container}>
-        <Box sx={styles.banner.contentBox}>
+        <AboutSection />
+        {/*<Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary" sx={styles.titleHeading}>
             YOUR PARTNER,
             <Text sx={styles.orangeText}>IN PROGRESS</Text>
@@ -23,7 +26,7 @@ export default function Banner() {
           <Text as="p" variant="heroSecondary" sx={styles.titleContent}>
             From Ground to Greatness: Unlocking Reliable Water for Every Home.
           </Text>
-        </Box>
+        </Box>*/}
       </Container>
     </section>
   );

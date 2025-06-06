@@ -18,7 +18,7 @@ const data = [
     name: 'Charles Njihia',
     project: 'Highview Apartments, Joska Kangundo Road (2022)',
     services:
-      'Hydrogeological survey, Drilling, Solar-powered pumping system, Steel tank & tower installation',
+      'Hydrogeological survey, Drilling & Steel tank',
     quote:
       'Their detailed survey and innovative drilling solutions, combined with advanced installation techniques, significantly enhanced our project’s sustainability and efficiency.',
   },
@@ -164,12 +164,12 @@ const styles = {
     transition: 'all 0.3s',
     borderRadius: '6px',
     p: [
-      '30px 20px 40px',
-      '30px 25px 40px',
-      '30px 20px 40px',
-      '35px 30px 45px 40px',
-      '30px 30px 40px',
-      '35px 30px 45px 40px',
+      '40px 20px 60px', // Increased top and bottom padding
+      '40px 25px 60px',
+      '40px 20px 60px',
+      '45px 30px 65px 40px',
+      '40px 30px 60px',
+      '45px 30px 65px 40px',
     ],
     bg: 'white',
     textAlign: 'left',
@@ -190,7 +190,6 @@ const styles = {
     mb: [3, null, null, '22px'],
     color: 'text',
     lineHeight: 1.6,
-    fontStyle: 'italic',
   },
   description: {
     fontSize: [1, null, null, 2],
@@ -203,12 +202,12 @@ const styles = {
     fontSize: [1, null, null, 2],
     fontWeight: 700,
     mb: '3px',
-    color: 'text',
+    color: 'secondary',
     lineHeight: 1.3,
     mt: '10px',
   },
   designation: {
-    color: 'primary',
+    color: 'accent',
     fontWeight: '500',
     fontSize: 1,
     lineHeight: 1.4,

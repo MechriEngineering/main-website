@@ -76,7 +76,7 @@ const styles = {
   },
   navLink: {
     textDecoration: 'none',
-    color: 'primary',
+    color: 'accent',
     fontSize: 2,
     fontWeight: 'heading',
     px: 5,
@@ -84,10 +84,10 @@ const styles = {
     lineHeight: '1.2',
     transition: 'all 0.15s',
     '&:hover': {
-      color: 'secondary',
+      color: 'primary',
     },
     '&.active': {
-      color: 'secondary',
+      color: 'primary',
     },
     // Add scroll-based color transition
     '.sticky &': {

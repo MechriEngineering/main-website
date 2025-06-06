@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Router from 'next/router';
-import { Analytics } from "@vercel/analytics/react"
+
 import { ThemeProvider } from 'theme-ui'; //1
 import { StickyProvider } from '../contexts/app/app.provider';//2
 import theme from '../theme';//3
@@ -56,7 +56,7 @@ export default function CustomApp({ Component, pageProps }) {
       <StickyProvider>
         {loading && <PreLoader isExiting={exiting} />}
         <Component {...pageProps} />
-        <Analytics />
+
       </StickyProvider>
     </ThemeProvider>
 

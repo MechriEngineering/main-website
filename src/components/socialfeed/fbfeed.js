@@ -55,6 +55,9 @@ const styles = {
     section: {
         mt: 4,
         mb: 4,
+        display: 'flex',
+        allignItems: 'center',
+
     },
     facebookFeed: {
         width: '100%',

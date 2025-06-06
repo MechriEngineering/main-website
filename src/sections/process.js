@@ -61,7 +61,7 @@ export default function Process() {
 
 const styles = {
   process: {
-    backgroundColor: 'primary',
+    backgroundColor: 'background_secondary',
     backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: 'center center',
@@ -146,7 +146,7 @@ const styles = {
     mt: '-5px',
     title: {
       fontSize: [3, null, 4, null, null, 5],
-      color: 'white',
+      color: '#234582',
       lineHeight: [1.4, null, null, null, null, 1.55],
       pr: [0, null, null, null, null, 2],
       mb: [2, 3],
@@ -156,7 +156,7 @@ const styles = {
       fontSize: 1,
       fontWeight: 400,
       lineHeight: [1.85, null, null, 1.9, 2],
-      color: 'white',
+      color: '#234582',
       opacity: 0.75,
       pr: [0, null, null, null, null, 5],
     },

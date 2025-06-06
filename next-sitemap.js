@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://www.jengakwako.bbsltd.co.ke/',
+  siteUrl: 'https://mechriengineering.co.ke/',
   generateRobotsTxt: true,
   // optional
   // robotsTxtOptions: {
