@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Box, Grid, Text, Heading, Image } from 'theme-ui';
+import { jsx, Container, Box, Grid, Text, Image } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 
 import DescriptionThumb from 'assets/solar installation.webp';
@@ -14,6 +14,7 @@ export default function AboutSection() {
   return (
     <section id='about' sx={{ ...styles.section, pt: [4, 5, 6] }}>
       <Container sx={styles.containerBox}>
+
         <Box sx={styles.contentBox}>
           <TextFeature subTitle={data.subTitle} title={data.title} />
           <Grid sx={styles.grid}>
@@ -25,11 +26,20 @@ export default function AboutSection() {
           </Grid>
         </Box>
         <Box sx={styles.imageCard}>
-          <Image
+          {/* <Image
             src={DescriptionThumb}
             alt="Solar Installation"
-            sx={styles.thumbnailImage}
-          />
+            sx={styles.thumbnailVideo}
+          /> */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            sx={styles.thumbnailVideo}
+          >
+            <source src='/home.mp4' type="video/mp4" />
+          </video>
         </Box>
       </Container>
     </section>
@@ -55,12 +65,13 @@ const styles = {
     overflow: 'hidden',
     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
   },
-  thumbnailImage: {
+  thumbnailVideo: {
     width: '100%',
     height: 'auto',
     maxWidth: '600px',
     mx: 'auto',
     objectFit: 'cover',
+    opacity: 0.8,
   },
   contentBox: {
     flex: [1, null, null, 0.5],

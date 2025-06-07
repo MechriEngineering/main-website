@@ -51,7 +51,8 @@ export default {
     details: [
       {
         icon: FaEnvelope,
-        info: 'info@mechriengineering.co.ke'
+        info: 'info@mechriengineering.co.ke',
+        link: 'mailto:info@mechriengineering.co.ke?subject=Inquiry%20from%20Website' // Added mailto link
       },
       {
         icon: FaPhone,

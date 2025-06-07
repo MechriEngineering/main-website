@@ -8,6 +8,7 @@ import SEO from '../components/seo';
 import Aboutbg from 'assets/homebanner1.jpg';
 import FeaturedProject from '../sections/featured-project';
 
+
 export default function AboutPage() {
     return (
         <ThemeProvider theme={theme}>

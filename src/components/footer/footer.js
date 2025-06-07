@@ -1,15 +1,33 @@
 /** @jsx jsx */
 import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
-import Link from 'next/link'; // to navigate to other pages
+import Link from 'next/link';
 import data from './footer.data';
 import { FaChevronRight } from 'react-icons/fa';
 import Nca from 'assets/NCA.png';
 import Footerbg from 'assets/footerbg1.jpg';
 
+// Reusable component for rendering link lists (menuItems and resources)
+const LinkList = ({ heading, items }) => (
+  <Box>
+    <Heading sx={styles.footer.heading}>{heading}</Heading>
+    <nav>
+      {items.map(({ path, label }, i) => (
+        <Link href={path} key={i} passHref>
+          <a sx={styles.footer.link}>
+            <FaChevronRight sx={styles.footer.icon} />
+            {label}
+          </a>
+        </Link>
+      ))}
+    </nav>
+  </Box>
+);
+
 export default function Footer() {
+  const { socialMedia, menuItems, resources, getInTouch } = data;
+
   return (
     <footer sx={styles.footer}>
-
       {/* Site Map and Social Media Section */}
       <Box sx={styles.footer.siteMapBg}>
         <Container sx={styles.footer.siteMapContainer}>
@@ -17,60 +35,50 @@ export default function Footer() {
             <Grid sx={styles.footer.siteMapGrid}>
               {/* Social Media and Accreditations Column */}
               <Box>
-                <Heading sx={styles.footer.heading}>{data.socialMedia.heading}</Heading>
+                <Heading sx={styles.footer.heading}>{socialMedia.heading}</Heading>
                 <nav sx={styles.footer.socialLinks}>
-                  <Grid sx={styles.footer.socialGrid}>
-                    {data.socialMedia.links.map(({ path, icon: IconComponent }, i) => (
-                      <Box as="span" key={i}>
-                        <a sx={styles.footer.socialIcon} href={path} target="_blank" rel="noopener noreferrer">
-                          <IconComponent />
-                        </a>
-                      </Box>
+                  <Box sx={styles.footer.socialGrid}>
+                    {socialMedia.links.map(({ path, icon: IconComponent }, i) => (
+                      <a
+                        key={i}
+                        href={path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={styles.footer.socialIcon}
+                      >
+                        <IconComponent />
+                      </a>
                     ))}
-                  </Grid>
+                  </Box>
                 </nav>
-
-                {/* Accreditations */}
                 <Box sx={styles.footer.accreditations}>
                   <Heading sx={styles.footer.heading}>Accreditations</Heading>
-                  <Image src={Nca} style={{ width: '70px', height: 'auto' }} alt="NCA Logo" />
+                  <Image src={Nca} sx={{ width: '70px', height: 'auto' }} alt="NCA Logo" />
                 </Box>
               </Box>
 
-              {/* Other Footer Sections */}
+              {/* Menu Items and Resources */}
+              <LinkList heading={menuItems.heading} items={menuItems.quickLinks} />
+              <LinkList heading={resources.heading} items={resources.items} />
+
+              {/* Get In Touch */}
               <Box>
-                <Heading sx={styles.footer.heading}>{data.menuItems.heading}</Heading>
-                <nav>
-                  {data.menuItems.quickLinks.map(({ path, label }, i) => (
-                    <Link href={path} key={i} passHref>
-                      <a sx={styles.footer.link}>
-                        <FaChevronRight sx={styles.footer.icon} />
-                        {label}
-                      </a>
-                    </Link>
-                  ))}
-                </nav>
-              </Box>
-              <Box>
-                <Heading sx={styles.footer.heading}>{data.resources.heading}</Heading>
-                <nav>
-                  {data.resources.items.map(({ path, label }, i) => (
-                    <Link href={path} key={i} passHref>
-                      <a sx={styles.footer.link}>
-                        <FaChevronRight sx={styles.footer.icon} />
-                        {label}
-                      </a>
-                    </Link>
-                  ))}
-                </nav>
-              </Box>
-              <Box>
-                <Heading sx={styles.footer.heading}>{data.getInTouch.heading}</Heading>
+                <Heading sx={styles.footer.heading}>{getInTouch.heading}</Heading>
                 <Box sx={styles.footer.contactInfo}>
-                  {data.getInTouch.details.map(({ icon: IconComponent, info }, i) => (
+                  {getInTouch.details.map(({ icon: IconComponent, info, link }, i) => (
                     <Box key={i} sx={styles.footer.contactItem}>
                       <IconComponent sx={styles.footer.contactIcon} />
-                      <Text>{info}</Text>
+                      {link ? (
+                        <a
+                          href={link}
+                          sx={styles.footer.link}
+                          rel={link.startsWith('mailto:') ? 'noopener' : 'noopener noreferrer'}
+                        >
+                          <Text>{info}</Text>
+                        </a>
+                      ) : (
+                        <Text>{info}</Text>
+                      )}
                     </Box>
                   ))}
                 </Box>
@@ -84,14 +92,18 @@ export default function Footer() {
       <Box sx={styles.footer.copywriter}>
         <Grid sx={styles.footer.copywriterGrid}>
           <Text sx={styles.footer.copyright}>
-            ©️ {new Date().getFullYear()} Mechri Engineering Solutions Ltd
+            © {new Date().getFullYear()} Mechri Engineering Solutions Ltd
           </Text>
-          <Text>Powered by
+          <Text>
+            Powered by
             <a
-              sx={styles.atLink}
-              href={'https://alphainsights.co.ke/'}
+              sx={styles.footer.atLink}
+              href="https://alphainsights.co.ke/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              👉 AlphatechInsights
+              {' '}
+              AlphatechInsights
             </a>
           </Text>
         </Grid>
@@ -102,7 +114,6 @@ export default function Footer() {
 
 const styles = {
   footer: {
-
     siteMapBg: {
       pt: '50px',
       pb: '50px',
@@ -142,7 +153,6 @@ const styles = {
       fontSize: [1, '15px'],
       color: 'white',
       fontWeight: '400',
-      mb: 2,
       cursor: 'pointer',
       transition: 'all 0.35s',
       display: 'block',
@@ -162,12 +172,8 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       transition: 'all 0.25s',
-      cursor: 'pointer',
       ':last-child': {
         mb: '0',
-      },
-      '&:hover': {
-        color: 'primary',
       },
     },
     contactIcon: {
@@ -175,12 +181,10 @@ const styles = {
       marginRight: '10px',
     },
     socialGrid: {
-      display: 'grid',
-      gridTemplateColumns: ['1fr', '1fr', '1fr', '1fr', 'repeat(5, 1fr)'],
-      gap: '30px',
-      justifyItems: 'center',
       display: 'flex',
       flexDirection: 'row',
+      gap: '30px',
+      justifyItems: 'center',
     },
     socialLinks: {
       display: 'flex',
@@ -209,25 +213,14 @@ const styles = {
       lineHeight: 1.4,
       fontWeight: 700,
       mb: [2, null, 3, 2, 3],
-      cursor: 'pointer',
-
     },
     icon: {
       color: 'accent',
       marginRight: '8px',
     },
-
     accreditations: {
       mt: '20px',
     },
-    accreditationGrid: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '30px',
-      mt: '10px',
-    },
-
     copywriter: {
       borderTop: '1px solid',
       borderTopColor: 'border_color',
@@ -247,9 +240,9 @@ const styles = {
       fontSize: [1, '15px'],
       mb: [3, 0],
     },
+    atLink: {
+      textDecoration: 'none',
+      color: 'green',
+    },
   },
-  atLink: {
-    textDecoration: 'none',
-    color: 'green'
-  }
 };

@@ -6,6 +6,7 @@ import theme from '../theme';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Services from '../sections/serviceslisting';
+import Gallery from '../components/gallery';
 
 
 export default function Ourservices() {
@@ -15,6 +16,7 @@ export default function Ourservices() {
                 <Layout>
                     <SEO title="Our services" />
                     <Services />
+                    <Gallery />
                 </Layout>
             </StickyProvider>
         </ThemeProvider>

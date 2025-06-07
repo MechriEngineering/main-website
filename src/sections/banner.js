@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import { Container, Box, Heading, Text } from 'theme-ui';
+import { Container, } from 'theme-ui';
 import AboutSection from '../sections/about-section';
 
 export default function Banner() {
